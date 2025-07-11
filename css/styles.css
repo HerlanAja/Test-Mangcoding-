@@ -1511,16 +1511,19 @@ section#services::before {
 section#learning {
   background-color: #FFFFFF;
   color: #1a1a1a;
-  padding: 80px 24px; /* Sedikit penyesuaian padding */
+  padding: 80px 24px;
+  /* Sedikit penyesuaian padding */
   font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
-  overflow: hidden; /* Mencegah elemen keluar tak terduga */
+  overflow: hidden;
+  /* Mencegah elemen keluar tak terduga */
 }
 
 #learning .container {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 120px; /* Padding diubah menjadi 0 atas-bawah */
+  padding: 0 120px;
+  /* Padding diubah menjadi 0 atas-bawah */
 }
 
 #learning .grid {
@@ -1528,11 +1531,13 @@ section#learning {
   grid-template-columns: repeat(12, 1fr);
   gap: 32px;
   margin-bottom: 48px;
-  align-items: center; /* Menyelaraskan item di tengah secara vertikal */
+  align-items: center;
+  /* Menyelaraskan item di tengah secara vertikal */
 }
 
 #learning .col-span-6 {
-  grid-column: span 12; /* Default untuk mobile */
+  grid-column: span 12;
+  /* Default untuk mobile */
 }
 
 /* Aturan untuk desktop (lebar lebih dari 768px) */
@@ -1543,7 +1548,8 @@ section#learning {
 }
 
 #learning .text-xs {
-  font-size: 14px; /* Sedikit diperbesar agar lebih mudah dibaca */
+  font-size: 14px;
+  /* Sedikit diperbesar agar lebih mudah dibaca */
   line-height: 1.5;
   margin-bottom: 8px;
   font-weight: 400;
@@ -1552,7 +1558,8 @@ section#learning {
 #learning .heading {
   font-weight: 400;
   font-size: 36px;
-  line-height: 1.2; /* Disesuaikan agar lebih rapat */
+  line-height: 1.2;
+  /* Disesuaikan agar lebih rapat */
   margin: 0 0 24px 0;
 }
 
@@ -1565,7 +1572,8 @@ section#learning {
 }
 
 #learning .text-right {
-  text-align: left; /* Default: rata kiri untuk mobile */
+  text-align: left;
+  /* Default: rata kiri untuk mobile */
 }
 
 /* Aturan rata kanan hanya untuk desktop */
@@ -1576,7 +1584,8 @@ section#learning {
 }
 
 #learning .text-xxs {
-  font-size: 12px; /* Sedikit diperbesar */
+  font-size: 12px;
+  /* Sedikit diperbesar */
   line-height: 1.5;
   font-weight: 400;
   color: #9ca3af;
@@ -1655,12 +1664,14 @@ section#learning {
 #learning .btn {
   background-color: #000;
   color: #fff;
-  font-size: 12px; /* Sedikit diperbesar */
+  font-size: 12px;
+  /* Sedikit diperbesar */
   line-height: 1;
   font-weight: 400;
   border: none;
   border-radius: 9999px;
-  padding: 10px 24px; /* Disesuaikan */
+  padding: 10px 24px;
+  /* Disesuaikan */
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -1676,6 +1687,7 @@ section#learning {
   #learning .container {
     padding: 0 60px;
   }
+
   #learning .heading {
     font-size: 32px;
   }
@@ -1686,19 +1698,25 @@ section#learning {
   section#learning {
     padding: 60px 24px;
   }
+
   #learning .container {
     padding: 0 24px;
   }
+
   #learning .grid {
-    gap: 24px; /* Mengurangi jarak antar grid */
+    gap: 24px;
+    /* Mengurangi jarak antar grid */
     margin-bottom: 32px;
   }
+
   #learning .heading {
     font-size: 28px;
   }
+
   #learning .image-container {
     margin: 32px 0;
   }
+
   #learning .btn-container {
     margin-top: 32px;
   }
@@ -1707,22 +1725,30 @@ section#learning {
 /* Ponsel */
 @media (max-width: 480px) {
   section#learning {
-    padding: 48px 16px; /* Mengurangi padding utama */
+    padding: 48px 16px;
+    /* Mengurangi padding utama */
   }
+
   #learning .container {
-    padding: 0; /* Menghapus padding container karena sudah diatur di section */
+    padding: 0;
+    /* Menghapus padding container karena sudah diatur di section */
   }
+
   #learning .heading {
-    font-size: 24px; /* Mengecilkan judul */
+    font-size: 24px;
+    /* Mengecilkan judul */
   }
+
   #learning .text-xs {
     font-size: 13px;
   }
+
   #learning .overlay {
     padding: 8px 12px;
     font-size: 9px;
   }
 }
+
 /* Learning end */
 
 /* Testimonial Start */
@@ -1733,7 +1759,8 @@ section#learning {
   display: flex;
   align-items: center;
   gap: 64px;
-  background-color: #FFFFFF; /* Warna latar disamakan dengan section learning */
+  background-color: #FFFFFF;
+  /* Warna latar disamakan dengan section learning */
 }
 
 .testimonial-header {
@@ -1771,7 +1798,8 @@ section#learning {
 /* Slider Container */
 .testimonial-slider {
   flex: 1.5;
-  overflow: hidden; /* Biarkan ini untuk 'merapikan' sudut dari card */
+  overflow: hidden;
+  /* Biarkan ini untuk 'merapikan' sudut dari card */
 }
 
 .slider-container {
@@ -1779,13 +1807,17 @@ section#learning {
   overflow-x: auto;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* For Firefox */
-  -ms-overflow-style: none; /* For IE and Edge */
-  padding: 20px 0; /* Padding to prevent shadow clipping */
+  scrollbar-width: none;
+  /* For Firefox */
+  -ms-overflow-style: none;
+  /* For IE and Edge */
+  padding: 20px 0;
+  /* Padding to prevent shadow clipping */
 }
 
 .slider-container::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
+  display: none;
+  /* For Chrome, Safari, and Opera */
 }
 
 .testimonials-track {
@@ -1818,14 +1850,16 @@ section#learning {
   font-weight: 500;
   color: #A0AEC0;
   letter-spacing: -0.01em;
-  margin-bottom: 70px; /* Space between logo and quote */
+  margin-bottom: 70px;
+  /* Space between logo and quote */
 }
 
 .testimonial-quote {
   font-size: 18px;
   line-height: 1.6;
   color: #111827;
-  margin-bottom: auto; /* Pushes author to the bottom */
+  margin-bottom: auto;
+  /* Pushes author to the bottom */
   padding-bottom: 24px;
   font-weight: 500;
 }
@@ -1863,10 +1897,10 @@ section#learning {
   .testimonial-title {
     font-size: 48px;
   }
-  
+
   /* Tambahkan ini untuk memastikan slider tidak ikut scroll */
   .testimonial-slider {
-      width: 100%;
+    width: 100%;
   }
 }
 
@@ -1888,189 +1922,251 @@ section#learning {
     font-size: 16px;
   }
 }
+
 /* Testimonial End */
 
 /* Footer */
-body {
-            font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: #fafafa;
-            color: #1a1a1a;
-            line-height: 1.6;
-            overflow-x: hidden;
-            margin: 0;
-        }
+.site-footer {
+    background-color: #121212; 
+    color: #A0AEC0; 
+    padding: 80px 40px 40px;
+    position: relative;
+    overflow: hidden; 
+}
 
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2; 
+}
 
-        .site-footer {
-            background-color: #121212; 
-            color: #A0AEC0; 
-            padding: 80px 40px 40px;
-            position: relative;
-            overflow: hidden; 
-        }
+.background-text {
+    position: absolute;
+    bottom: -60px; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20vw; 
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.04);
+    z-index: 1;
+    user-select: none;
+    pointer-events: none;
+    white-space: nowrap;
+}
+      
+/* Bagian Atas Footer (Grid 3 Kolom) */
+.footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* Default: 3 kolom untuk desktop */
+    gap: 40px;
+    padding-bottom: 40px;
+}
+      
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
 
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2; 
-        }
+/* Kolom 1: Info Kontak */
+.logo-circle {
+    width: 48px;
+    height: 48px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #121212;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    border: none;
+}
 
-        .background-text {
-            position: absolute;
-            bottom: -60px; 
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 20vw; 
-            font-weight: 700;
-            color: rgba(255, 255, 255, 0.04); /* Putih dengan transparansi sangat tinggi */
-            z-index: 1;
-            user-select: none; /* Agar teks tidak bisa diseleksi */
-            pointer-events: none; /* Agar bisa diklik menembus teks */
-            white-space: nowrap;
-        }
-        
-        /* Bagian Atas Footer (Grid 3 Kolom) */
-        .footer-top {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr; /* Rasio lebar kolom */
-            gap: 40px;
-            padding-bottom: 40px;
-        }
-        
-        .footer-column {
-            display: flex;
-            flex-direction: column;
-        }
+.contact-email {
+    color: #FFFFFF;
+    font-size: 28px; /* Diperbesar sedikit agar lebih menonjol */
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 8px;
+    margin-bottom: 24px;
+    transition: color 0.3s;
+}
+.contact-email:hover {
+    color: #E5E7EB;
+}
 
-        /* Kolom 1: Info Kontak */
-        .logo-circle {
-            width: 48px;
-            height: 48px;
-            border: 1px solid #4A5568;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #FFFFFF;
-            font-size: 20px;
-            font-weight: 500;
-            margin-bottom: 24px;
-        }
+.contact-details {
+    display: flex;
+    flex-wrap: wrap; /* Agar bisa turun baris jika tidak muat */
+    gap: 16px 32px; /* Jarak antar baris dan kolom */
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+.contact-details p {
+    margin: 0;
+}
+      
+.social-icons {
+    display: flex;
+    gap: 16px;
+}
+.social-icons a {
+    color: #A0AEC0;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons a:hover {
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+.social-icons svg {
+    width: 20px;
+    height: 20px;
+}
 
-        .contact-email {
-            color: #FFFFFF;
-            font-size: 24px;
-            font-weight: 500;
-            text-decoration: none;
-            margin-bottom: 16px;
-        }
+/* Kolom 2: Navigasi Link */
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+}
+.footer-nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    transition: color 0.3s;
+}
+.footer-nav a:hover {
+    color: #E5E7EB;
+}
 
-        .contact-details {
-            font-size: 14px;
-            line-height: 1.7;
-        }
-        
-        .contact-details p {
-            margin: 0;
-            margin-bottom: 16px;
-        }
-        
-        .social-icons {
-            display: flex;
-            gap: 16px;
-            margin-top: 8px; /* Jarak dari teks telepon */
-        }
-        .social-icons a {
-            color: #A0AEC0;
-            transition: color 0.3s ease;
-        }
-        .social-icons a:hover {
-            color: #FFFFFF;
-        }
-        .social-icons svg {
-            width: 20px;
-            height: 20px;
-        }
+/* Kolom 3: Call to Action (CTA) */
+.footer-cta h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin: 0 0 16px 0;
+}
+.cta-button {
+    background-color: #FFFFFF;
+    color: #121212;
+    padding: 12px 24px;
+    border-radius: 99px;
+    text-decoration: none;
+    font-weight: 500;
+    align-self: flex-start;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.cta-button:hover {
+    background-color: #E5E7EB;
+    transform: translateY(-2px);
+}
 
-        /* Kolom 2: Navigasi Link */
-        .footer-nav a {
-            color: #FFFFFF;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 500;
-            margin-bottom: 16px;
-        }
-        .footer-nav a:hover {
-            text-decoration: underline;
-        }
+/* Garis Pemisah */
+.footer-divider {
+    border: none;
+    height: 1px;
+    background-color: #374151;
+    margin: 0;
+}
 
-        /* Kolom 3: Call to Action (CTA) */
-        .footer-cta h3 {
-            font-size: 16px;
-            font-weight: 500;
-            color: #FFFFFF;
-            margin: 0 0 16px 0;
-        }
-        .cta-button {
-            background-color: #FFFFFF;
-            color: #121212;
-            padding: 12px 24px;
-            border-radius: 99px; /* Membuat bentuk pil */
-            text-decoration: none;
-            font-weight: 500;
-            align-self: flex-start; /* Agar tombol tidak meregang penuh */
-            transition: background-color 0.3s ease;
-        }
-        .cta-button:hover {
-            background-color: #E5E7EB;
-        }
+/* Bagian Bawah Footer */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 32px;
+    font-size: 14px;
+}
+.legal-links a {
+    color: #A0AEC0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.legal-links a:hover {
+    color: #FFFFFF;
+}
+.legal-links span {
+    margin: 0 10px;
+}
 
-        /* Garis Pemisah */
-        .footer-divider {
-            border: none;
-            height: 1px;
-            background-color: #374151; /* Abu-abu gelap */
-            margin: 0;
-        }
+/* --- PENYESUAIAN RESPONSIIF --- */
 
-        /* Bagian Bawah Footer */
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 32px;
-            font-size: 14px;
-        }
-        .legal-links a {
-            color: #A0AEC0;
-            text-decoration: none;
-        }
-        .legal-links a:hover {
-            color: #FFFFFF;
-        }
-        .legal-links span {
-            margin: 0 10px;
-        }
+/* Tablet */
+@media (max-width: 800px) {
+    .site-footer {
+        padding: 60px 30px 30px;
+    }
+    .footer-top {
+        grid-template-columns: 1fr; /* Semua kolom jadi 1 */
+        gap: 32px;
+    }
+    .contact-details {
+        gap: 8px 24px;
+    }
+}
 
-        /* Penyesuaian untuk layar kecil (Responsif) */
-        @media (max-width: 800px) {
-            .footer-top {
-                grid-template-columns: 1fr 1fr; /* Menjadi 2 kolom */
-                gap: 30px;
-            }
-            .footer-cta {
-                grid-column: 1 / -1; /* CTA mengambil lebar penuh di baris baru */
-                margin-top: 20px;
-            }
-        }
+/* Mobile - Sesuai Gambar */
+@media (max-width: 600px) {
+    .site-footer {
+        padding: 50px 20px 20px;
+    }
+    
+    .logo-circle {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
 
-        @media (max-width: 600px) {
-            .footer-top {
-                grid-template-columns: 1fr; /* Menjadi 1 kolom */
-            }
-            .footer-bottom {
-                flex-direction: column; /* Menumpuk vertikal */
-                gap: 16px;
-            }
-        }
+    .contact-email {
+        font-size: 22px; /* Ukuran email disesuaikan */
+    }
+
+    .contact-details {
+        flex-direction: column; /* Alamat dan telepon ditumpuk */
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    /* Kunci utama: Mengatur ulang layout kolom navigasi dan CTA */
+    .footer-top {
+        grid-template-columns: 1fr 1fr; /* Menjadi 2 kolom */
+        row-gap: 24px;
+    }
+
+    /* Kolom kontak dibuat mengambil lebar penuh */
+    .footer-column:first-child {
+        grid-column: 1 / -1; 
+    }
+
+    /* Tombol CTA dan judulnya ditata ulang */
+    .footer-cta {
+        justify-content: flex-start;
+    }
+    
+    .background-text {
+        font-size: 28vw; /* Teks background diperbesar */
+        bottom: -30px;
+    }
+
+    /* Bagian bawah footer ditumpuk dan rata kiri */
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .legal-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .legal-links span {
+        display: none; /* Titik pemisah dihilangkan */
+    }
+}
