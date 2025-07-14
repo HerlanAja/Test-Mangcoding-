@@ -7,20 +7,24 @@
   <title>Portofolio Dewangga</title>
   <link rel="stylesheet" href="/css/styles.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 
 <body>
-  <!-- Home Start -->
   <section id="home">
     <nav class="navbar">
       <div class="nav-container">
         <div class="nav-left">
           <div class="logo">D</div>
           <ul class="nav-menu">
-            <li><a href="#about-container">About Me</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="support.html">Support</a></li>
-            <li><a href="learning.html">Learning</a></li>
+            <li><a href="#About-container">About Me</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#footer">Support</a></li>
+            <li><a href="#learning">Learning</a></li>
           </ul>
         </div>
         <button class="connect-btn">Let's Connect <i class="fas fa-arrow-right"></i></button>
@@ -48,7 +52,7 @@
               <span class="gray-text">in crafting meaningful digital experiences.</span>
             </h1>
             <div class="description">
-              <p>Product Designer, Strategic passionate about designing stunning and turning through the power of words.
+              <p style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">A <span style="color: black; font-weight: bold;">Product Designer,</span>Strategic passionate about designing stunning and turning through the power of words.</span>Product Designer, <span>Strategic passionate about designing stunning and turning through the power of words.</span>
               </p>
             </div>
             <button class="cta-button">Let's Connect</button>
@@ -79,18 +83,13 @@
       </div>
     </main>
   </section>
-  <!-- Home End -->
-
-  <!-- About Start -->
   <section id="About-container">
     <div class="container">
-      <!-- Decorative elements -->
       <div class="decoration decoration-1"></div>
       <div class="decoration decoration-2"></div>
       <div class="decoration decoration-3"></div>
       <div class="decoration decoration-4"></div>
 
-      <!-- Content Section -->
       <div class="content">
         <div class="about-label">About Me</div>
 
@@ -103,7 +102,6 @@
           startups and digital teams turn complexity into clarity, and ideas into intuitive, scalable products.
         </p>
 
-        <!-- Project Showcase -->
         <div class="projects">
           <div class="project-card">
             <div class="project-mockup">
@@ -196,7 +194,6 @@
           </div>
         </div>
 
-        <!-- Skills Tags -->
         <div class="skills">
           <span class="skill-tag primary">Website Design</span>
           <span class="skill-tag primary">App Design</span>
@@ -208,15 +205,11 @@
         </div>
       </div>
 
-      <!-- Character Section -->
       <div class="character-section">
         <img src="/assets/profile1.png" alt="3D Character Illustration" class="character-image">
       </div>
     </div>
   </section>
-  <!-- About End -->
-
-  <!-- Service Start  -->
   <section id="services" class="services-section">
     <div class="container">
       <div class="services-header">
@@ -330,10 +323,7 @@
       </div>
     </div>
   </section>
-  <!-- Service End -->
-
-  <!-- Learning Start -->
-   <section id="learning">
+  <section id="learning">
     <div class="container">
       <div class="grid">
         <div class="col-span-6">
@@ -351,7 +341,6 @@
         </div>
       </div>
 
-      <!-- Image container dengan class baru -->
       <div class="image-container">
         <img src="/assets/Project.png" alt="RumahTara - UI KIT Application" class="project-image" />
       </div>
@@ -361,10 +350,7 @@
       </div>
     </div>
   </section>
-  <!-- Learning End -->
-
-  <!-- Testimonial Start -->
-   <section class="testimonial-section">
+  <section class="testimonial-section">
         <div class="testimonial-header">
             <div class="testimonial-label">Testimonial</div>
             <h2 class="testimonial-title">
@@ -422,10 +408,7 @@
             </div>
         </div>
     </section>
-  <!-- Testimonial End -->
-
-  <!-- Footer Stae -->
-   <section id="footer">
+  <section id="footer">
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-top">
@@ -465,11 +448,10 @@
                     <a href="#">Terms & Conditions</a>
                 </div>
             </div>
-          <div class="background-text">Dewangga</div>
+          <div class="background-text" >Dewangga</div>
         </div>
     </footer>
    </section>
-  <!-- Footer End -->
   <script src="/js/home.js"></script>
 </body>
 

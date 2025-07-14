@@ -24,8 +24,8 @@ body {
   font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   min-height: 100vh;
   line-height: 1.6;
-  background-image: url('/assets/Hero\ Section.png');
-  /* Latar belakang body utama */
+  /* background-image: url('/assets/Hero\ Section.png'); */
+  background-color: white;
 }
 
 /* --- NAVBAR --- */
@@ -143,12 +143,12 @@ body {
 
 .badge {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: rem;
 }
 
 .badge span {
-  background: #bbf7d0;
-  color: #065f46;
+  background: radial-gradient(to right, #3AFF12 60%, #3AFF12 0%);
+  color: black;
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
   font-size: 0.9rem;
@@ -180,10 +180,14 @@ body {
 
 .hero-center {
   text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto
 }
 
 .main-heading {
-  font-size: 3.5rem;
+  font-size: 70px; 
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 2rem;
@@ -210,8 +214,10 @@ body {
 }
 
 .cta-button {
-  background: #1f2937;
-  color: white;
+  background: #03040A;
+  /* Warna background diubah menjadi #03040A */
+  color: #FFFFFF;
+  /* Mengubah warna teks menjadi putih agar terlihat jelas di background gelap */
   border: none;
   padding: 1rem 2rem;
   border-radius: 30px;
@@ -267,25 +273,59 @@ body {
   text-align: center;
   margin-top: 4rem;
   background: white;
-  padding: 3rem 1rem;
   border-radius: 20px;
+  max-width: 800px;
+  /* Pertahankan ini untuk kontrol lebar keseluruhan */
+  margin: 0 auto;
+  /* Pusatkan stats-section */
+
+  /* Perubahan baru sesuai permintaan */
+  width: 100%;
+  /* "w fill" - akan mengisi lebar parent container yang tersedia */
+  height: 115px;
+  /* "h 115" */
+  padding: 24px 16px;
+  /* "padding atas bawah 24, kiri kanan 16" */
+  box-sizing: border-box;
+  /* Sangat penting: memastikan padding termasuk dalam width/height */
+  overflow: hidden;
+  /* Tambahkan ini jika kamu khawatir konten akan meluber dari tinggi 115px */
 }
 
+/* Pertahankan gaya untuk .stat-item, .stat-number, dan .stat-label yang sebelumnya */
 .stat-item {
-  padding: 1rem;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  /* Hapus width dan height di sini, atau sesuaikan jika ada kebutuhan spesifik. */
+  /* Jika .stats-section punya height 115px, .stat-item akan menyesuaikan secara otomatis */
+  /* atau kamu bisa atur height: 100%; pada .stat-item agar mengisi penuh height parent-nya */
+  /* Namun, saya akan komentari dulu agar tidak mengganggu pengaturan height: 115px pada stats-section */
+  /* width: 108px; */
+  /* height: 78px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
 }
 
 .stat-number {
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: 900;
   color: #1f2937;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
+  line-height: 1.1;
 }
 
 .stat-label {
-  color: #6b7280;
-  font-size: 1rem;
+  font-family: 'Satoshi', sans-serif;
+  color: #A1A6B0;
+  font-size: 0.9rem;
   font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
 }
 
 @media (max-width: 850px) {
@@ -1927,246 +1967,272 @@ section#learning {
 
 /* Footer */
 .site-footer {
-    background-color: #121212; 
-    color: #A0AEC0; 
-    padding: 80px 40px 40px;
-    position: relative;
-    overflow: hidden; 
+  background-color: #121212;
+  color: #A0AEC0;
+  padding: 80px 40px 40px;
+  position: relative;
+  overflow: hidden;
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2; 
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .background-text {
-    position: absolute;
-    bottom: -60px; 
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 20vw; 
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.04);
-    z-index: 1;
-    user-select: none;
-    pointer-events: none;
-    white-space: nowrap;
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20vw;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.04);
+  z-index: 1;
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
 }
-      
+
 /* Bagian Atas Footer (Grid 3 Kolom) */
 .footer-top {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr; /* Default: 3 kolom untuk desktop */
-    gap: 40px;
-    padding-bottom: 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  /* Default: 3 kolom untuk desktop */
+  gap: 40px;
+  padding-bottom: 40px;
 }
-      
+
 .footer-column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Kolom 1: Info Kontak */
 .logo-circle {
-    width: 48px;
-    height: 48px;
-    background: #FFFFFF;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #121212;
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 24px;
-    border: none;
+  width: 48px;
+  height: 48px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #121212;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  border: none;
 }
 
 .contact-email {
-    color: #FFFFFF;
-    font-size: 28px; /* Diperbesar sedikit agar lebih menonjol */
-    font-weight: 500;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 8px;
-    margin-bottom: 24px;
-    transition: color 0.3s;
+  color: #FFFFFF;
+  font-size: 28px;
+  /* Diperbesar sedikit agar lebih menonjol */
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 8px;
+  margin-bottom: 24px;
+  transition: color 0.3s;
 }
+
 .contact-email:hover {
-    color: #E5E7EB;
+  color: #E5E7EB;
 }
 
 .contact-details {
-    display: flex;
-    flex-wrap: wrap; /* Agar bisa turun baris jika tidak muat */
-    gap: 16px 32px; /* Jarak antar baris dan kolom */
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  /* Agar bisa turun baris jika tidak muat */
+  gap: 16px 32px;
+  /* Jarak antar baris dan kolom */
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 24px;
 }
+
 .contact-details p {
-    margin: 0;
+  margin: 0;
 }
-      
+
 .social-icons {
-    display: flex;
-    gap: 16px;
+  display: flex;
+  gap: 16px;
 }
+
 .social-icons a {
-    color: #A0AEC0;
-    display: inline-block;
-    transition: color 0.3s ease, transform 0.3s ease;
+  color: #A0AEC0;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
+
 .social-icons a:hover {
-    color: #FFFFFF;
-    transform: translateY(-2px);
+  color: #FFFFFF;
+  transform: translateY(-2px);
 }
+
 .social-icons svg {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 /* Kolom 2: Navigasi Link */
 .footer-nav {
-    display: flex;
-    flex-direction: column;
-}
-.footer-nav a {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 16px;
-    transition: color 0.3s;
-}
-.footer-nav a:hover {
-    color: #E5E7EB;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Kolom 3: Call to Action (CTA) */
+.footer-nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #E5E7EB;
+}
+
 .footer-cta h3 {
-    font-size: 16px;
-    font-weight: 500;
-    color: #FFFFFF;
-    margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin: 0 0 16px 0;
 }
+
 .cta-button {
-    background-color: #FFFFFF;
-    color: #121212;
-    padding: 12px 24px;
-    border-radius: 99px;
-    text-decoration: none;
-    font-weight: 500;
-    align-self: flex-start;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  background: #03040A;
+  color: #FFFFFF;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Satoshi', sans-serif;
 }
+
 .cta-button:hover {
-    background-color: #E5E7EB;
-    transform: translateY(-2px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(31, 41, 55, 0.3);
 }
 
 /* Garis Pemisah */
 .footer-divider {
-    border: none;
-    height: 1px;
-    background-color: #374151;
-    margin: 0;
+  border: none;
+  height: 1px;
+  background-color: #374151;
+  margin: 0;
 }
 
 /* Bagian Bawah Footer */
 .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 32px;
-    font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32px;
+  font-size: 14px;
 }
+
 .legal-links a {
-    color: #A0AEC0;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: #A0AEC0;
+  text-decoration: none;
+  transition: color 0.3s;
 }
+
 .legal-links a:hover {
-    color: #FFFFFF;
+  color: #FFFFFF;
 }
+
 .legal-links span {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 /* --- PENYESUAIAN RESPONSIIF --- */
 
 /* Tablet */
 @media (max-width: 800px) {
-    .site-footer {
-        padding: 60px 30px 30px;
-    }
-    .footer-top {
-        grid-template-columns: 1fr; /* Semua kolom jadi 1 */
-        gap: 32px;
-    }
-    .contact-details {
-        gap: 8px 24px;
-    }
+  .site-footer {
+    padding: 60px 30px 30px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    /* Semua kolom jadi 1 */
+    gap: 32px;
+  }
+
+  .contact-details {
+    gap: 8px 24px;
+  }
 }
 
 /* Mobile - Sesuai Gambar */
 @media (max-width: 600px) {
-    .site-footer {
-        padding: 50px 20px 20px;
-    }
-    
-    .logo-circle {
-        width: 44px;
-        height: 44px;
-        font-size: 18px;
-    }
+  .site-footer {
+    padding: 50px 20px 20px;
+  }
 
-    .contact-email {
-        font-size: 22px; /* Ukuran email disesuaikan */
-    }
+  .logo-circle {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
 
-    .contact-details {
-        flex-direction: column; /* Alamat dan telepon ditumpuk */
-        gap: 12px;
-        margin-bottom: 20px;
-    }
+  .contact-email {
+    font-size: 22px;
+    /* Ukuran email disesuaikan */
+  }
 
-    /* Kunci utama: Mengatur ulang layout kolom navigasi dan CTA */
-    .footer-top {
-        grid-template-columns: 1fr 1fr; /* Menjadi 2 kolom */
-        row-gap: 24px;
-    }
+  .contact-details {
+    flex-direction: column;
+    /* Alamat dan telepon ditumpuk */
+    gap: 12px;
+    margin-bottom: 20px;
+  }
 
-    /* Kolom kontak dibuat mengambil lebar penuh */
-    .footer-column:first-child {
-        grid-column: 1 / -1; 
-    }
+  /* Kunci utama: Mengatur ulang layout kolom navigasi dan CTA */
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    /* Menjadi 2 kolom */
+    row-gap: 24px;
+  }
 
-    /* Tombol CTA dan judulnya ditata ulang */
-    .footer-cta {
-        justify-content: flex-start;
-    }
-    
-    .background-text {
-        font-size: 28vw; /* Teks background diperbesar */
-        bottom: -30px;
-    }
+  /* Kolom kontak dibuat mengambil lebar penuh */
+  .footer-column:first-child {
+    grid-column: 1 / -1;
+  }
 
-    /* Bagian bawah footer ditumpuk dan rata kiri */
-    .footer-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-    }
-    .legal-links {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-    .legal-links span {
-        display: none; /* Titik pemisah dihilangkan */
-    }
+  /* Tombol CTA dan judulnya ditata ulang */
+  .footer-cta {
+    justify-content: flex-start;
+  }
+
+  .background-text {
+    font-size: 28vw;
+    /* Teks background diperbesar */
+    bottom: -30px;
+  }
+
+  /* Bagian bawah footer ditumpuk dan rata kiri */
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .legal-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .legal-links span {
+    display: none;
+  }
 }
