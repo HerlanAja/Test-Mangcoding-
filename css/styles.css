@@ -24,8 +24,6 @@ body {
   font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   min-height: 100vh;
   line-height: 1.6;
-  /* background-image: url('/assets/Hero\ Section.png'); */
-  background-color: white;
 }
 
 /* --- NAVBAR --- */
@@ -158,8 +156,8 @@ body {
 
 .hero-section {
   display: grid;
-  grid-template-columns: 250px 1fr 80px;
-  gap: 3rem;
+  grid-template-columns: .3fr 1fr .3fr;
+  gap: 1 px;
   align-items: center;
   margin-bottom: 4rem;
 }
@@ -186,7 +184,7 @@ body {
 }
 
 .main-heading {
-  font-size: 70px; 
+  font-size: 70px;
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
   line-height: 1.1;
@@ -215,9 +213,7 @@ body {
 
 .cta-button {
   background: #03040A;
-  /* Warna background diubah menjadi #03040A */
   color: #FFFFFF;
-  /* Mengubah warna teks menjadi putih agar terlihat jelas di background gelap */
   border: none;
   padding: 1rem 2rem;
   border-radius: 30px;
@@ -245,8 +241,8 @@ body {
 }
 
 .social-link {
-  width: 50px;
-  height: 50px;
+  width: 56px;
+  height: 56px;
   background: white;
   border: 1px solid #e5e7eb;
   border-radius: 50%;
@@ -266,6 +262,31 @@ body {
   border-color: #d1d5db;
 }
 
+.social-link i {
+  font-size: 28px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media (max-width: 640px) {
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-link i {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+
 .stats-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -275,38 +296,22 @@ body {
   background: white;
   border-radius: 20px;
   max-width: 800px;
-  /* Pertahankan ini untuk kontrol lebar keseluruhan */
   margin: 0 auto;
-  /* Pusatkan stats-section */
-
-  /* Perubahan baru sesuai permintaan */
   width: 100%;
-  /* "w fill" - akan mengisi lebar parent container yang tersedia */
   height: 115px;
-  /* "h 115" */
   padding: 24px 16px;
-  /* "padding atas bawah 24, kiri kanan 16" */
   box-sizing: border-box;
-  /* Sangat penting: memastikan padding termasuk dalam width/height */
   overflow: hidden;
-  /* Tambahkan ini jika kamu khawatir konten akan meluber dari tinggi 115px */
 }
 
-/* Pertahankan gaya untuk .stat-item, .stat-number, dan .stat-label yang sebelumnya */
+
 .stat-item {
   box-sizing: border-box;
   padding: 0.5rem;
-  /* Hapus width dan height di sini, atau sesuaikan jika ada kebutuhan spesifik. */
-  /* Jika .stats-section punya height 115px, .stat-item akan menyesuaikan secara otomatis */
-  /* atau kamu bisa atur height: 100%; pada .stat-item agar mengisi penuh height parent-nya */
-  /* Namun, saya akan komentari dulu agar tidak mengganggu pengaturan height: 115px pada stats-section */
-  /* width: 108px; */
-  /* height: 78px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid red; */
 }
 
 .stat-number {
@@ -491,7 +496,7 @@ body {
   }
 }
 
-/* about start*/
+/* about start */
 
 section#About-container {
   background-color: #ffffff;
@@ -500,33 +505,48 @@ section#About-container {
 #About-container .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 40px;
+  padding: 60px 40px; /* Adjusted padding-top to bring content higher */
   display: grid;
   grid-template-columns: 1fr 400px;
   gap: 80px;
-  align-items: center;
-  min-height: 100vh;
+  align-items: center; /* Aligns items to the vertical center */
   position: relative;
 }
 
 #About-container .content {
   padding-right: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 40px;
+  align-items: start;
+  margin-bottom: 40px; /* Adds space below the content for better visual balance */
 }
 
 #About-container .about-label {
   font-size: 14px;
   font-weight: 500;
   color: #6b7280;
-  margin-bottom: 24px;
   letter-spacing: 0.5px;
+  grid-column: 1;
+  grid-row: 1;
+  white-space: nowrap;
+}
+
+#About-container .text-content {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 #About-container .main-title {
   font-size: 48px;
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 32px;
+  margin-bottom: 0;
   letter-spacing: -0.02em;
+  max-width: none;
 }
 
 #About-container .main-title .highlight {
@@ -538,14 +558,14 @@ section#About-container {
   font-size: 16px;
   color: #6b7280;
   line-height: 1.7;
-  margin-bottom: 48px;
-  max-width: 480px;
+  margin-bottom: 0;
+  max-width: none;
 }
 
 #About-container .projects {
   display: flex;
   gap: 16px;
-  margin-bottom: 32px;
+  margin-bottom: 0;
   justify-content: flex-start;
   align-items: flex-start;
 }
@@ -766,7 +786,7 @@ section#About-container {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 0;
 }
 
 #About-container .skill-tag {
@@ -791,15 +811,16 @@ section#About-container {
 #About-container .character-section {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* Aligns the image itself to the center of its flex container */
   position: relative;
 }
 
 #About-container .character-image {
-  width: 400px;
-  height: 600px;
-  border-radius: 20px;
+  width: 576px;
+  height: auto;
+  max-height: 864px;
   object-fit: cover;
+  display: block;
 }
 
 @media (max-width: 1024px) {
@@ -807,20 +828,40 @@ section#About-container {
     grid-template-columns: 1fr;
     gap: 60px;
     text-align: center;
-    padding: 40px 30px;
+    padding: 100px 30px;
+    align-items: center;
   }
 
   #About-container .content {
     padding-right: 0;
     order: 2;
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    text-align: center;
   }
 
-  #About-container .character-section {
-    order: 1;
+  #About-container .about-label {
+    grid-column: 1;
+    grid-row: auto;
+    margin-bottom: 16px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  #About-container .text-content {
+    grid-column: 1;
+    grid-row: auto;
+    gap: 24px;
   }
 
   #About-container .main-title {
     font-size: 42px;
+  }
+
+  #About-container .description {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #About-container .projects {
@@ -830,12 +871,22 @@ section#About-container {
   #About-container .skills {
     justify-content: center;
   }
+
+  #About-container .character-section {
+    order: 1;
+    align-items: center;
+  }
+
+  #About-container .character-image {
+    max-width: 400px;
+    height: auto;
+  }
 }
 
 @media (max-width: 768px) {
   #About-container .container {
     grid-template-columns: 1fr;
-    padding: 24px 20px;
+    padding: 100px 20px;
     gap: 32px;
     text-align: left;
     min-height: auto;
@@ -844,6 +895,7 @@ section#About-container {
   #About-container .content {
     order: 1;
     padding-right: 0;
+    text-align: left;
   }
 
   #About-container .character-section {
@@ -862,6 +914,7 @@ section#About-container {
     font-size: 12px;
     font-weight: 500;
     margin-bottom: 16px;
+    text-align: left;
   }
 
   #About-container .main-title {
@@ -876,6 +929,8 @@ section#About-container {
     margin-bottom: 24px;
     max-width: none;
     color: #6b7280;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   #About-container .projects {
@@ -940,7 +995,7 @@ section#About-container {
 
 @media (max-width: 480px) {
   #About-container .container {
-    padding: 20px 16px;
+    padding: 100px 16px;
     gap: 24px;
   }
 
@@ -1000,7 +1055,7 @@ section#About-container {
 
 @media (max-width: 360px) {
   #About-container .container {
-    padding: 16px 12px;
+    padding: 100px 12px;
     gap: 20px;
   }
 
@@ -1038,7 +1093,6 @@ section#About-container {
   }
 }
 
-/* Animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -1080,15 +1134,13 @@ section#About-container {
   opacity: 0;
 }
 
-/* about end */
-
 /* Services start */
-
 section#services {
   color: #ffffff;
   background: url('/assets/Services.png');
   padding: 100px 0;
-  min-height: 100vh;
+  /* min-height: 100vh; */ /* Dihapus atau dikomentari jika tidak diperlukan */
+  margin-top: -100px; /* Adjust this value if needed to make it overlap more or less */
   display: flex;
   align-items: center;
   position: relative;
@@ -1546,250 +1598,342 @@ section#services::before {
 
 /* Services end */
 
+
 /* Learning start */
 
 section#learning {
-  background-color: #FFFFFF;
-  color: #1a1a1a;
-  padding: 80px 24px;
-  /* Sedikit penyesuaian padding */
-  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  line-height: 1.6;
-  overflow: hidden;
-  /* Mencegah elemen keluar tak terduga */
+    background-color: #FFFFFF;
+    color: #1a1a1a;
+    padding: 80px 24px;
+    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    overflow: hidden;
 }
 
 #learning .container {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 120px;
-  /* Padding diubah menjadi 0 atas-bawah */
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 120px;
 }
 
 #learning .grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 32px;
-  margin-bottom: 48px;
-  align-items: center;
-  /* Menyelaraskan item di tengah secara vertikal */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+    margin-bottom: 48px;
+    align-items: center;
 }
 
 #learning .col-span-6 {
-  grid-column: span 12;
-  /* Default untuk mobile */
+    grid-column: span 12;
 }
 
-/* Aturan untuk desktop (lebar lebih dari 768px) */
 @media (min-width: 768px) {
-  #learning .col-span-6 {
-    grid-column: span 6;
-  }
+    #learning .col-span-6 {
+        grid-column: span 6;
+    }
 }
 
 #learning .text-xs {
-  font-size: 14px;
-  /* Sedikit diperbesar agar lebih mudah dibaca */
-  line-height: 1.5;
-  margin-bottom: 8px;
-  font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    font-weight: 400;
 }
 
 #learning .heading {
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 1.2;
-  /* Disesuaikan agar lebih rapat */
-  margin: 0 0 24px 0;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.2;
+    margin: 0 0 24px 0;
 }
 
 #learning .text-gray {
-  color: #9ca3af;
+    color: #9ca3af;
 }
 
 #learning .font-semibold {
-  font-weight: 600;
+    font-weight: 600;
 }
 
 #learning .text-right {
-  text-align: left;
-  /* Default: rata kiri untuk mobile */
+    text-align: left;
 }
 
-/* Aturan rata kanan hanya untuk desktop */
 @media (min-width: 768px) {
-  #learning .text-right {
-    text-align: right;
-  }
+    #learning .text-right {
+        text-align: right;
+    }
 }
 
 #learning .text-xxs {
-  font-size: 12px;
-  /* Sedikit diperbesar */
-  line-height: 1.5;
-  font-weight: 400;
-  color: #9ca3af;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #9ca3af;
 }
 
-#learning .image-container {
-  margin: 48px 0;
-  text-align: center;
-  background-image: url('/assets/Oranger 1.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  padding: 0 !important;
+/* --- Stacked Cards Styles --- */
+#learning .card-stack {
+    position: relative;
+     /* width: 1000px; Lebar total tumpukan kartu */
+     height: 492px; /*Tinggi tumpukan kartu */
+    margin: 48px auto;/* Tambahkan margin atas/bawah dan tengah */
+    display: flex;
+     justify-content: center; /*Pusatkan stack di container */
+    align-items: center;
 }
 
-#learning .image-container img {
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  background: none !important;
-  padding: 0 !important;
-  margin: 0 auto;
-  display: block;
-  max-width: 100%;
-  height: auto;
+#learning .custom-card {
+    width: 384px;
+    height: 492px;
+    border-radius: 24px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
 }
 
-#learning .project-image {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+#learning .card-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 24px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: white;
+    box-sizing: border-box;
 }
 
-#learning .overlay {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
-  right: 24px;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 12px;
-  padding: 12px 16px;
-  color: white;
-  font-size: 10px;
-  line-height: 1.4;
+#learning .card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
-#learning .overlay p {
-  margin: 4px 0;
+#learning .card-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 16px;
 }
 
-#learning .tags {
-  margin-top: 8px;
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
+#learning .card-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
 #learning .tag {
-  border: 1px solid white;
-  border-radius: 9999px;
-  padding: 2px 8px;
-  font-size: 8px;
-  white-space: nowrap;
+    padding: 6px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    font-size: 13px;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
+    color: white;
+    white-space: nowrap;
 }
 
+/* Positioning for stacked cards */
+#learning .card-2 {
+    /* left: 382.57px; Sesuaikan posisi agar tampak bertumpuk */
+    top: -18.72px;
+    transform: rotate(-6deg);
+    z-index: 1;
+}
+
+#learning .card-3 {
+    /* left: 383.34px; Sesuaikan posisi agar tampak bertumpuk */
+    top: -18.72px;
+    transform: rotate(6deg);
+    z-index: 2;
+}
+
+#learning .card-1 {
+    /* left: 382.57px; Sesuaikan posisi agar tampak bertumpuk */
+    top: -18.72px;
+    transform: scale(1);
+    z-index: 3;
+}
+
+/* --- Button Styles --- */
 #learning .btn-container {
-  margin-top: 48px;
-  text-align: center;
+    margin-top: 48px;
+    text-align: center;
 }
 
 #learning .btn {
-  background-color: #000;
-  color: #fff;
-  font-size: 12px;
-  /* Sedikit diperbesar */
-  line-height: 1;
-  font-weight: 400;
-  border: none;
-  border-radius: 9999px;
-  padding: 10px 24px;
-  /* Disesuaikan */
-  cursor: pointer;
-  transition: all 0.3s ease;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 400;
+    border: none;
+    border-radius: 9999px;
+    padding: 10px 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 #learning .btn:hover {
-  background-color: #333;
+    background-color: #333;
 }
 
-/* --- Penyesuaian Responsif --- */
+/* --- Media Queries for Responsiveness --- */
 
 /* Tablet (Lanskap) */
 @media (max-width: 1024px) {
-  #learning .container {
-    padding: 0 60px;
-  }
+    #learning .container {
+        padding: 0 60px;
+    }
 
-  #learning .heading {
-    font-size: 32px;
-  }
+    #learning .heading {
+        font-size: 32px;
+    }
+
+    /* Stacked Cards for Tablet */
+    #learning .card-stack {
+        /* width: 700px; */
+        /* width: 100%; */
+        height: 380px;
+    }
+    #learning .custom-card {
+        width: 280px;
+        height: 380px;
+    }
+    #learning .card-title {
+        font-size: 16px;
+    }
+    #learning .card-description {
+        font-size: 13px;
+    }
+    #learning .tag {
+        font-size: 12px;
+        padding: 5px 12px;
+    }
+    /* Reposition for tablet stack */
+    #learning .card-2 {
+        /* left: 280px; */
+        top: -14px;
+        transform: rotate(-6deg);
+    }
+    #learning .card-3 {
+        /* left: 280px; Disesuaikan */
+        top: -14px;
+        transform: rotate(6deg);
+    }
+    #learning .card-1 {
+        /* left: 280px; Disesuaikan */
+        top: -14px;
+        transform: scale(1);
+    }
 }
 
 /* Tablet (Potret) */
 @media (max-width: 768px) {
-  section#learning {
-    padding: 60px 24px;
-  }
+    section#learning {
+        padding: 60px 24px;
+    }
 
-  #learning .container {
-    padding: 0 24px;
-  }
+    #learning .container {
+        padding: 0 24px;
+    }
 
-  #learning .grid {
-    gap: 24px;
-    /* Mengurangi jarak antar grid */
-    margin-bottom: 32px;
-  }
+    #learning .grid {
+        gap: 24px;
+        margin-bottom: 32px;
+    }
 
-  #learning .heading {
-    font-size: 28px;
-  }
+    #learning .heading {
+        font-size: 28px;
+    }
 
-  #learning .image-container {
-    margin: 32px 0;
-  }
+    /* Mobile view for stacked cards (vertical list) */
+    #learning .card-stack {
+        width: 100%;
+        max-width: 384px; /* Batasi lebar agar tidak terlalu besar */
+        height: auto; /* Biarkan tinggi menyesuaikan */
+        display: flex;
+        flex-direction: column; /* Ubah menjadi kolom */
+        align-items: center; /* Pusatkan kartu */
+        gap: 20px; /* Jarak antar kartu */
+        padding: 0;
+        margin: 32px auto; /* Margin untuk mobile */
+    }
 
-  #learning .btn-container {
-    margin-top: 32px;
-  }
+    #learning .custom-card {
+        position: relative; /* Ganti dari absolute agar bisa dalam flex-flow */
+        width: 100%;
+        height: 400px; /* Tinggi kartu di mobile */
+        left: auto !important; /* Reset posisi */
+        top: auto !important; /* Reset posisi */
+        transform: none !important; /* Hapus rotasi/skala */
+        z-index: auto !important; /* Reset z-index */
+        margin: 0;
+    }
+    
+    #learning .card-overlay {
+        padding: 20px;
+    }
+    
+    #learning .card-title {
+        font-size: 17px;
+    }
+    
+    #learning .card-description {
+        font-size: 14px;
+    }
+
+    #learning .btn-container {
+        margin-top: 32px;
+    }
 }
 
 /* Ponsel */
 @media (max-width: 480px) {
-  section#learning {
-    padding: 48px 16px;
-    /* Mengurangi padding utama */
-  }
+    section#learning {
+        padding: 48px 16px;
+    }
 
-  #learning .container {
-    padding: 0;
-    /* Menghapus padding container karena sudah diatur di section */
-  }
+    #learning .container {
+        padding: 0;
+    }
 
-  #learning .heading {
-    font-size: 24px;
-    /* Mengecilkan judul */
-  }
+    #learning .heading {
+        font-size: 24px;
+    }
 
-  #learning .text-xs {
-    font-size: 13px;
-  }
+    #learning .text-xs {
+        font-size: 13px;
+    }
 
-  #learning .overlay {
-    padding: 8px 12px;
-    font-size: 9px;
-  }
+    #learning .custom-card {
+        height: 350px; 
+    }
+    
+    #learning .card-overlay {
+        padding: 16px;
+    }
+    
+    #learning .card-title {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    #learning .card-description {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+    
+    #learning .tag {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
 }
 
-/* Learning end */
+/* Learning End */
 
 /* Testimonial Start */
 .testimonial-section {
@@ -1999,7 +2143,6 @@ section#learning {
 .footer-top {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  /* Default: 3 kolom untuk desktop */
   gap: 40px;
   padding-bottom: 40px;
 }
@@ -2028,7 +2171,6 @@ section#learning {
 .contact-email {
   color: #FFFFFF;
   font-size: 28px;
-  /* Diperbesar sedikit agar lebih menonjol */
   font-weight: 500;
   text-decoration: underline;
   text-decoration-thickness: 1px;

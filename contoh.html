@@ -1,11 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stacked Cards</title>
+  <style>
+    @font-face {
+      font-family: 'Satoshi';
+      src: url('../fonts/Satoshi-Medium.otf') format('opentype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Satoshi';
+      src: url('../fonts/Satoshi-Black.otf') format('opentype');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    body {
+      background-color: #121212;
+      font-family: 'Satoshi', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .card-stack {
+      position: relative;
+      width: 1000px;
+      height: 492px;
+    }
+
+    .custom-card {
+      width: 384px;
+      height: 492px;
+      border-radius: 24px;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      overflow: hidden;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .card-overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 24px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+      color: white;
+      box-sizing: border-box;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .card-description {
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 16px;
+    }
+
+    .card-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      padding: 6px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      font-size: 13px;
+      background-color: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(6px);
+      color: white;
+      white-space: nowrap;
+    }
+
+    .card-2 {
+      left: 382.57px;
+      top: -18.72px;
+      transform: rotate(-6deg);
+      z-index: 1;
+    }
+
+    .card-3 {
+      left: 383.34px;
+      top: -18.72px;
+      transform: rotate(6deg);
+      z-index: 2;
+    }
+
+    .card-1 {
+      left: 382.57px;
+      top: -18.72px;
+      transform: scale(1);
+      z-index: 3;
+    }
+
+    /* Tablet View */
+    @media (max-width: 1024px) {
+      .card-stack {
+        width: 700px;
+        height: 380px;
+      }
+      .custom-card {
+        width: 280px;
+        height: 380px;
+      }
+      .card-title {
+        font-size: 16px;
+      }
+      .card-description {
+        font-size: 13px;
+      }
+      .tag {
+        font-size: 12px;
+        padding: 5px 12px;
+      }
+    }
+
+    /* Mobile View */
+    @media (max-width: 768px) {
+      body {
+        align-items: flex-start;
+        padding: 20px 0;
+        height: auto;
+      }
+      
+      .card-stack {
+        width: 100%;
+        max-width: 384px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0 20px;
+      }
+      
+      .custom-card {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        z-index: auto !important;
+        margin: 0;
+      }
+      
+      .card-overlay {
+        padding: 20px;
+      }
+      
+      .card-title {
+        font-size: 17px;
+      }
+      
+      .card-description {
+        font-size: 14px;
+      }
+    }
+
+    /* Small Mobile View */
+    @media (max-width: 480px) {
+      .custom-card {
+        height: 350px;
+      }
+      
+      .card-overlay {
+        padding: 16px;
+      }
+      
+      .card-title {
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+      
+      .card-description {
+        font-size: 13px;
+        margin-bottom: 12px;
+      }
+      
+      .tag {
+        font-size: 12px;
+        padding: 4px 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-  
+
+  <div class="card-stack">
+    <div class="custom-card card-2" style="background-image: url('/assets/card2.png');">
+      <div class="card-overlay">
+        <h3 class="card-title">FinTrack – Finance Dashboard</h3>
+        <p class="card-description">
+          Simplifying financial insights with interactive dashboards for modern teams.
+        </p>
+        <div class="card-tags">
+          <span class="tag">Dashboard</span>
+          <span class="tag">SaaS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom-card card-3" style="background-image: url('/assets/card3.png');">
+      <div class="card-overlay">
+        <h3 class="card-title">EduPlatform – Learning App</h3>
+        <p class="card-description">
+          Empowering students through intuitive design and seamless learning tools.
+        </p>
+        <div class="card-tags">
+          <span class="tag">eLearning</span>
+          <span class="tag">Mobile App</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom-card card-1" style="background-image: url('/assets/card1.png');">
+      <div class="card-overlay">
+        <h3 class="card-title">RumahTara – UI KIT Application</h3>
+        <p class="card-description">
+          Whether you're launching a product or refining one, I provide design services that drive results:
+        </p>
+        <div class="card-tags">
+          <span class="tag">UI/UX Design</span>
+          <span class="tag">App Design</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
