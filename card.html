@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Design Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        @font-face {
+            font-family: 'Satoshi';
+            src: url('Satoshi-Regular.woff2') format('woff2'),
+                url('Satoshi-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Satoshi';
+            src: url('Satoshi-Medium.woff2') format('woff2'),
+                url('Satoshi-Medium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Satoshi", sans-serif;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* Tambahkan padding horizontal agar ada ruang di sisi */
+            padding: 20px;
+            /* Padding ini akan berlaku di semua ukuran layar */
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            /* Jarak antar kartu */
+            width: 100%;
+            /* Memastikan container mengambil lebar penuh yang tersedia */
+            max-width: 1200px;
+            /* Batasi lebar maksimal container */
+            padding: 20px 0;
+            /* Padding vertikal untuk container jika diperlukan */
+        }
+
+        .design-card {
+            /* Ubah width dari fixed ke responsif */
+            width: 100%;
+            /* Kartu akan mengisi lebar container */
+            max-width: 1200px;
+            /* Batasi lebar maksimal kartu */
+            height: 505px;
+            /* Pertahankan tinggi default untuk desktop */
+            background: linear-gradient(135deg, #18181C 0%, #1F1F25 50%, rgba(0, 0, 0, 0.3) 100%);
+            border-radius: 24px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Pseudo-element for radial gradient light effect on top-left */
+        .design-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 25%, rgba(255, 255, 255, 0.03) 45%, transparent 70%);
+            border-radius: 24px 0 0 0;
+            z-index: 1;
+        }
+
+        /* Pseudo-element for subtle top-left border/glow effect */
+        .design-card::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 30%, transparent 70%);
+            border-radius: 26px;
+            z-index: 0;
+        }
+
+        .content-section {
+            /* Gunakan flex-grow agar mengisi ruang yang tersedia */
+            flex: 1;
+            /* Akan mengambil semua ruang yang tersisa setelah image-section */
+            max-width: 450px;
+            /* Tetapkan max-width untuk desktop, agar tidak terlalu lebar */
+            height: 100%;
+            /* Memastikan tinggi mengisi card */
+            padding: 60px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-self: center;
+            margin-left: 50px;
+            position: relative;
+            z-index: 2;
+            background-image: radial-gradient(circle, #333 1px, transparent 1px);
+            background-size: 15px 15px;
+        }
+
+        .title {
+            font-family: "Satoshi", sans-serif;
+            font-weight: 500;
+            font-size: 40px;
+            color: #ffffff;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            font-family: "Satoshi", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: #b0b0b0;
+            line-height: 1.5;
+            margin-bottom: 40px;
+            flex-grow: 2;
+        }
+
+        .detail-button {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            color: #000000;
+            background-color: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 25px;
+            padding: 12px 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            align-self: flex-start;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .detail-button:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .detail-button:active {
+            transform: translateY(0);
+        }
+
+        .image-section {
+            width: 600px;
+            /* Lebar fixed untuk desktop, bisa disesuaikan */
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            /* Posisikan gambar di bawah */
+            justify-content: flex-end;
+            /* Posisikan gambar di kanan */
+            position: relative;
+            overflow: hidden;
+            /* Penting agar gambar tidak meluber */
+            z-index: 3;
+            /* Hapus padding-right karena gambar sudah sejajar dengan tepi */
+            padding-right: 0;
+        }
+
+        .laptop-image {
+            /* Agar gambar mengisi section dengan object-fit */
+            width: 100%;
+            /* Mengisi lebar image-section */
+            height: 100%;
+            /* Mengisi tinggi image-section */
+            object-fit: contain;
+            /* Memastikan gambar terlihat sepenuhnya, tidak terpotong */
+            object-position: bottom right;
+            /* Posisikan gambar ke kanan bawah */
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+            position: relative;
+            z-index: 4;
+            /* Hapus max-width: none karena width: 100% sudah menangani */
+        }
+
+        /* --- Responsive Design --- */
+
+        /* Untuk layar sedang (maksimal 1280px, desktop kecil/laptop) */
+        @media (max-width: 1280px) {
+            .design-card {
+                width: 90%;
+                /* Ambil 90% lebar layar */
+                max-width: 1000px;
+                /* Tetap batasi maksimal */
+                min-height: 480px;
+                /* Sedikit lebih kecil dari 505px, biar lebih fleksibel */
+            }
+
+            .content-section {
+                padding: 50px 40px;
+                /* Kurangi padding sedikit */
+                margin-left: 40px;
+                /* Kurangi margin */
+            }
+
+            .title {
+                font-size: 36px;
+            }
+
+            .image-section {
+                width: 50%;
+                /* Image section mengambil 50% lebar card */
+            }
+        }
+
+        /* Untuk layar tablet (maksimal 768px) */
+        @media (max-width: 768px) {
+            .design-card {
+                flex-direction: column;
+                /* Tata letak kolom: konten di atas, gambar di bawah */
+                height: auto;
+                /* Tinggi kartu menyesuaikan konten */
+                padding: 0;
+                /* Hapus padding agar konten dan gambar punya padding sendiri */
+            }
+
+            /* Sesuaikan ukuran pseudo-element jika masih relevan */
+            .design-card::before {
+                width: 250px;
+                height: 250px;
+                top: -50px;
+                /* Geser sedikit ke atas */
+                left: -50px;
+                /* Geser sedikit ke kiri */
+            }
+
+            .design-card::after {
+                display: none;
+                /* Sembunyikan pseudo-element after */
+            }
+
+            .content-section {
+                width: 100%;
+                /* Konten mengambil lebar penuh */
+                height: auto;
+                /* Tinggi menyesuaikan */
+                margin-left: 0;
+                /* Hapus margin kiri */
+                padding: 40px 30px;
+                /* Padding untuk konten */
+                align-items: flex-start;
+                /* Rata kiri */
+            }
+
+            .title {
+                font-size: 32px;
+                text-align: left;
+            }
+
+            .description {
+                font-size: 14px;
+                text-align: left;
+                margin-bottom: 30px;
+                /* Kurangi margin bawah */
+            }
+
+            .detail-button {
+                align-self: flex-start;
+                /* Pastikan tombol rata kiri */
+            }
+
+            .image-section {
+                width: 100%;
+                /* Gambar mengambil lebar penuh */
+                height: 350px;
+                /* Tinggi spesifik untuk gambar di tablet */
+                margin-left: 0;
+                padding: 20px;
+                /* Padding di sekitar gambar */
+                justify-content: center;
+                /* Pusatkan gambar secara horizontal */
+                align-items: center;
+                /* Pusatkan gambar secara vertikal */
+                object-position: center;
+                /* Posisikan gambar di tengah */
+            }
+
+            .laptop-image {
+                height: 100%;
+                /* Gambar mengisi tinggi image-section */
+                width: auto;
+                /* Lebar menyesuaikan rasio aspek */
+                object-fit: contain;
+                /* Pastikan seluruh gambar terlihat */
+            }
+        }
+
+        /* Untuk layar mobile kecil (maksimal 480px) */
+        @media (max-width: 480px) {
+            .design-card {
+                min-height: auto;
+                /* Biarkan tinggi menyesuaikan sepenuhnya */
+            }
+
+            .design-card::before {
+                width: 180px;
+                height: 180px;
+                top: -30px;
+                left: -30px;
+            }
+
+            .content-section {
+                padding: 30px 20px;
+                /* Padding konten lebih kecil */
+            }
+
+            .title {
+                font-size: 28px;
+            }
+
+            .description {
+                font-size: 13px;
+                margin-bottom: 20px;
+            }
+
+            .detail-button {
+                font-size: 12px;
+                padding: 10px 20px;
+            }
+
+            .image-section {
+                height: 250px;
+                /* Tinggi area gambar lebih kecil lagi */
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="services">
+        <div class="container">
+            <div class="design-card">
+                <div class="content-section">
+                    <h2 class="title">UI/UX Design</h2>
+                    <p class="description">
+                        Whether you're launching a product or refining one, I provide design services that drive
+                        results.
+                    </p>
+                    <button class="detail-button" onclick="handleDetailClick()">Detail Services</button>
+                </div>
+                <div class="image-section">
+                    <img src="/assets/hp.png" alt="Mobile phone showing app interface" class="laptop-image">
+                </div>
+            </div>
+
+            <div class="design-card">
+                <div class="content-section">
+                    <h2 class="title">Website Design</h2>
+                    <p class="description">
+                        Whether you're launching a product or refining one, I provide design services that drive
+                        results.
+                    </p>
+                    <button class="detail-button" onclick="handleDetailClick()">Detail Services</button>
+                </div>
+                <div class="image-section">
+                    <img src="/assets/laptopmokup.png" alt="Laptop showing website design" class="laptop-image">
+                </div>
+            </div>
+
+            <div class="design-card">
+                <div class="content-section">
+                    <h2 class="title">Illustration</h2>
+                    <p class="description">
+                        Whether you're launching a product or refining one, I provide design services that drive
+                        results.
+                    </p>
+                    <button class="detail-button" onclick="handleDetailClick()">Detail Services</button>
+                </div>
+                <div class="image-section">
+                    <img src="/assets/ecomers.png" alt="E-commerce interface design" class="laptop-image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function handleDetailClick() {
+            const button = event.target;
+            button.style.transform = "scale(0.95)";
+            setTimeout(() => {
+                button.style.transform = "";
+            }, 150);
+            alert("Detail Services clicked! Add your custom functionality here.");
+        }
+
+        // Animasi masuk untuk semua card
+        document.addEventListener("DOMContentLoaded", () => {
+            const cards = document.querySelectorAll(".design-card");
+            cards.forEach((card, index) => {
+                card.style.opacity = "0";
+                card.style.transform = "translateY(30px)";
+                setTimeout(() => {
+                    card.style.transition = "all 0.8s ease";
+                    card.style.opacity = "1";
+                    card.style.transform = "translateY(0)";
+                }, 100 + index * 200);
+            });
+        });
+
+        // Hover animasi untuk semua card
+        document.querySelectorAll(".design-card").forEach((card) => {
+            card.addEventListener("mouseenter", function () {
+                this.style.transform = "translateY(-5px)";
+                this.style.transition = "transform 0.3s ease";
+            });
+            card.addEventListener("mouseleave", function () {
+                this.style.transform = "translateY(0)";
+            });
+        });
+    </script>
+</body>
+
+</html>

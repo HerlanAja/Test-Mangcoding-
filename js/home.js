@@ -140,3 +140,37 @@ window.addEventListener('scroll', () => {
                 ticking = true;
             }
         });
+
+         function handleDetailClick() {
+            const button = event.target;
+            button.style.transform = "scale(0.95)";
+            setTimeout(() => {
+                button.style.transform = "";
+            }, 150);
+            alert("Detail Services clicked! Add your custom functionality here.");
+        }
+
+        // Animasi masuk untuk semua card
+        document.addEventListener("DOMContentLoaded", () => {
+            const cards = document.querySelectorAll(".design-card");
+            cards.forEach((card, index) => {
+                card.style.opacity = "0";
+                card.style.transform = "translateY(30px)";
+                setTimeout(() => {
+                    card.style.transition = "all 0.8s ease";
+                    card.style.opacity = "1";
+                    card.style.transform = "translateY(0)";
+                }, 100 + index * 200);
+            });
+        });
+
+        // Hover animasi untuk semua card
+        document.querySelectorAll(".design-card").forEach((card) => {
+            card.addEventListener("mouseenter", function () {
+                this.style.transform = "translateY(-5px)";
+                this.style.transition = "transform 0.3s ease";
+            });
+            card.addEventListener("mouseleave", function () {
+                this.style.transform = "translateY(0)";
+            });
+        });
