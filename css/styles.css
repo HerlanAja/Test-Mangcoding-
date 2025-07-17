@@ -206,11 +206,11 @@ body {
 }
 
 .black-text {
-    color: #1f2937;
+    color: #03040A;
 }
 
 .gray-text {
-    color: #9ca3af;
+    color: #A1A6B0;
 }
 
 .description {
@@ -1497,6 +1497,7 @@ section#learning {
 }
 
 #learning .heading {
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 36px;
     line-height: 1.2;
@@ -1635,6 +1636,7 @@ section#learning {
     }
 
     #learning .heading {
+        
         font-size: 32px;
     }
 
