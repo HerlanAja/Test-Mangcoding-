@@ -1844,7 +1844,7 @@ section#learning {
     font-size: 60px;
     font-weight: 800;
     line-height: 1.1;
-    margin-bottom: 24px;
+    margin-bottom: 130px;
     letter-spacing: -0.03em;
 }
 
@@ -1929,10 +1929,10 @@ section#learning {
 }
 
 .testimonial-quote {
-    font-family: 'Satoshi', sans-serif;
-    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
     line-height: 1.6;
-    color: #111827;
+    color: #03040A;
     margin-bottom: auto;
     padding-bottom: 24px;
     font-weight: 500;
@@ -1943,17 +1943,17 @@ section#learning {
 }
 
 .author-name {
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 600;
-    color: #111827;
+    color: #03040A;
     margin-bottom: 4px;
 }
 
 .author-title {
     font-family: 'Satoshi', sans-serif;
-    font-size: 14px;
-    color: #6B7280;
+    font-size: 16px;
+    color: #A1A6B0;
     font-weight: 400;
 }
 
