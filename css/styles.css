@@ -137,6 +137,7 @@ body {
 .main-content {
     padding-top: 100px;
     min-height: 100vh;
+    /* background-image: url('/assets/bgHome.png'); */
     background: radial-gradient(circle at top center, #A8FF78 0%, #E0FFE0 40%, #FFFFFF 80%);
 }
 
@@ -198,9 +199,9 @@ body {
 }
 
 .main-heading {
-    font-size: 70px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 900;
+    font-size: 80px;
+    font-family: 'satoshi', sans-serif;
+    font-weight: normal;
     line-height: 1.1;
     margin-bottom: 2rem;
 }
@@ -1182,6 +1183,7 @@ section#services::before {
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
+
 }
 
 .services-cards-wrapper {
