@@ -224,7 +224,7 @@ body {
 }
 
 .description p {
-    color: #6b7280;
+    color: #A1A6B0;
     font-size: 1rem;
     font-weight: 500;
     max-width: 400px;
@@ -434,6 +434,7 @@ body {
     .description p {
         font-size: 0.9rem;
         max-width: 300px;
+        text-align: center;
     }
 
     .hero-left {
